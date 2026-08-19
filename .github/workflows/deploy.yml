@@ -1,0 +1,18 @@
+name: Build and deploy
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'app/**'
+      - 'infra/scripts/**'
+      - '.github/workflows/deploy.yml'
+
+permissions:
+  contents: read
+
+env:
+  AWS_REGION: us-east-1
+  ARTIFACT_BUCKET: bizapp-artifacts-673515369143
+  TG_ARN: arn:aws:elasticloadbalancing:us-east-1:673515369143:targetgroup/bizapp-tg/d68a54ac1f5ad0f4

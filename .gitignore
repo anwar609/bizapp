@@ -1,0 +1,16 @@
+# Terraform
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfvars
+crash.log
+
+# Maven
+target/
+
+# IDE
+.idea/
+*.iml
+.settings/
+.classpath
+.project
